@@ -1,0 +1,28 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript">
+            var libraryJSON = {"library": [
+                    {"dvd": {"title": "Breakfast at Tiffany's", "format": "Movie", "genre": "Classic"}},
+                    {"dvd": {"title": "Contact", "format": "Movie", "genre": "Science Fiction"}},
+                    {"dvd": {"title": "Little Britain", "format": "TV Series", "genre": "Comedy"}}
+                ]
+            };
+        </script>
+    </head>
+    <body>
+        <table border="1" cellpadding="3">
+            <!-- that's not really really legal -->
+            <script type="text/javascript">
+                for (i = 0; i < libraryJSON.library.length; i++)
+                    document.write("<tr><td>" + libraryJSON.library[i].dvd.title + "</td><td>" + libraryJSON.library[i].dvd.format + "</td><td>" + libraryJSON.library[i].dvd.genre + "</td></tr>");
+            </script>
+        </table>
+    </body>
+</html>

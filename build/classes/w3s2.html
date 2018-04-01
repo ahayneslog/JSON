@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Create Object from JSON String</h2>
+        <p>Original name: <span id="origname"></span></p>
+        <p>New name: <span id="newname"></span></p>
+
+        <script>
+            var employees = [
+                {"firstName": "John", "lastName": "Doe"},
+                {"firstName": "Anna", "lastName": "Smith"},
+                {"firstName": "Peter", "lastName": "Jones"}, ];
+
+            document.getElementById("origname").innerHTML = employees[0].firstName + " " + employees[0].lastName;
+            employees[0].firstName = "Gilbert";
+            document.getElementById("newname").innerHTML = employees[0].firstName + " " + employees[0].lastName;
+        </script>
+
+    </body>
+</html>

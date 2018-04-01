@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#room').html(room.description);
+                $('#video').html("<iframe width=\"560\" height=\"315\" src=\"http://www.youtube.com/embed/" + room.media.youtubeId + "\" frameborder=\"0\" allowfullscreen></iframe>");
+            });
+            var room = {"id": "scavenger://uwf.edu/location/r435",
+                "is-a": {"id": "scavenger://uwf.edu/ontology/locations#room"},
+                "located-in": {"id": "scavenger://uwf.edu/location/bldg4"},
+                "contains": {"id": "scavenger://uwf.edu/actor/berndok"},
+                "description": "Room 435 in Building 4",
+                "media": {"youtubeId": "fvW6OE7WVB0"}
+            };
+        </script>
+    </head>
+    <body>
+        <h1 id="room"></h1>
+        <div id="video"></div>
+    </body>
+</html>

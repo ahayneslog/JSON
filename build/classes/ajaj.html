@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $.ajax({
+                    type: "GET",
+                    url: "library.json",
+                    dataType: "json",
+                    success:
+                            function(json) {
+                                alert(json.library);
+                                for (i = 0; i < json.library.length; i++) {
+                                    $('<tr></tr>').
+                                            html("<td>" + json.library[i].dvd.title + "</td><td>" + json.library[i].dvd.format + "</td><td>" + json.library[i].dvd.genre + "</td>").
+                                            appendTo('#dvds');
+                                }
+                            }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Welcome to AJAX with JSON (AJAJ?)</h1>
+        <table id="dvds" border="1" cellpadding="3">
+        </table>
+    </body>
+</html>
